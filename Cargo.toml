@@ -4,3 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+dotenvy = "0.15.7"
+ollama-rs = "0.3.1"
+tokio = "1.45.1"
