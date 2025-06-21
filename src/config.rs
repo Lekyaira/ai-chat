@@ -5,6 +5,7 @@ use std::error::Error;
 pub struct Config {
     pub host: String,
     pub port: u16,
+    pub model: String,
 }
 
 impl Config {
@@ -13,7 +14,8 @@ impl Config {
         dotenvy::dotenv().ok();
         let host = env::var("OLLAMA_HOST")?;
         let port: u16 = env::var("OLLAMA_PORT")?.parse()?;
-        Ok(Self { host, port })
+        let model = env::var("OLLAMA_MODEL")?;
+        Ok(Self { host, port, model })
     }
 
     /// Load the configuration or print a helpful message and exit on failure.
@@ -25,7 +27,7 @@ impl Config {
                 eprintln!(
                     "{}",
                     Red.paint(format!(
-                        "Missing or invalid configuration: {err}.\nSet OLLAMA_HOST and OLLAMA_PORT in your environment or .env file."
+                        "Missing or invalid configuration: {err}.\nSet OLLAMA_HOST, OLLAMA_PORT, and OLLAMA_MODEL in your environment or .env file."
                     ))
                 );
                 std::process::exit(1);

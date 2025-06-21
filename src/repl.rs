@@ -1,6 +1,6 @@
 use crate::ollama_client::OllamaClient;
-use rustyline::error::ReadlineError;
 use rustyline::DefaultEditor;
+use rustyline::error::ReadlineError;
 
 pub struct Repl {
     editor: DefaultEditor,
@@ -30,6 +30,7 @@ impl Repl {
                         println!("Enter your message. Use an empty line to submit. :exit to quit.");
                     } else if trimmed.is_empty() {
                         if !buffer.trim().is_empty() {
+                            println!("Sending prompt...");
                             self.history.push(buffer.clone());
                             self.client.stream_prompt(buffer.clone()).await;
                             buffer.clear();
