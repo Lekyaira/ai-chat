@@ -14,25 +14,25 @@
 
 ## Tasks
 
-- [ ] 1.0 Set up project dependencies and configuration
-  - [ ] 1.1 Verify Cargo dependencies for `dotenvy`, `ollama-rs`, `tokio`, `rustyline`, and `ansi_term`
-  - [ ] 1.2 Add `.env.example` documenting `OLLAMA_HOST` and `OLLAMA_PORT`
-- [ ] 2.0 Environment configuration module
-  - [ ] 2.1 Create `Config` struct to load variables using `dotenvy`
-  - [ ] 2.2 Print a helpful message if variables are missing
-- [ ] 3.0 Ollama client implementation
-  - [ ] 3.1 Write async function to send prompts and stream responses via `ollama-rs`
-  - [ ] 3.2 Handle network errors and print to `stderr`
-- [ ] 4.0 Interactive REPL
-  - [ ] 4.1 Build multi-line input loop using `rustyline` or similar
-  - [ ] 4.2 Store chat history in memory only
-  - [ ] 4.3 Provide `:exit` and `:help` commands and initial instructions
-- [ ] 5.0 Stream and display model output
-  - [ ] 5.1 Render tokens as they arrive
-  - [ ] 5.2 Colorize error messages using `ansi_term`
-- [ ] 6.0 Testing suite
-  - [ ] 6.1 Unit tests for `Config` behaviour
-  - [ ] 6.2 Unit tests for the Ollama client streaming logic
-  - [ ] 6.3 Integration test covering a simple REPL session
-- [ ] 7.0 Documentation
-  - [ ] 7.1 Explain usage and environment setup in `README.md`
+- [x] 1.0 Set up project dependencies and configuration
+  - [x] 1.1 Verify Cargo dependencies for `dotenvy`, `ollama-rs`, `tokio`, `rustyline`, and `ansi_term`
+  - [x] 1.2 Add `.env.example` documenting `OLLAMA_HOST` and `OLLAMA_PORT`
+- [x] 2.0 Environment configuration module
+  - [x] 2.1 Create `Config` struct to load variables using `dotenvy`
+  - [x] 2.2 Print a helpful message if variables are missing
+- [x] 3.0 Ollama client implementation
+  - [x] 3.1 Write async function to send prompts and stream responses via `ollama-rs`
+  - [x] 3.2 Handle network errors and print to `stderr`
+- [x] 4.0 Interactive REPL
+  - [x] 4.1 Build multi-line input loop using `rustyline` or similar
+  - [x] 4.2 Store chat history in memory only
+  - [x] 4.3 Provide `:exit` and `:help` commands and initial instructions
+- [x] 5.0 Stream and display model output
+  - [x] 5.1 Render tokens as they arrive
+  - [x] 5.2 Colorize error messages using `ansi_term`
+- [x] 6.0 Testing suite
+  - [x] 6.1 Unit tests for `Config` behaviour
+  - [x] 6.2 Unit tests for the Ollama client streaming logic
+  - [x] 6.3 Integration test covering a simple REPL session
+- [x] 7.0 Documentation
+  - [x] 7.1 Explain usage and environment setup in `README.md`
